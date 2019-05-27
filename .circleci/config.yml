@@ -44,8 +44,5 @@ jobs:
       #run tests
       - run:   |
             bundle exec rspec 
-      test:
-        post:
-          - bundle exec rubocop
-
+      
 
