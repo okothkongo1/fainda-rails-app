@@ -34,7 +34,7 @@ jobs:
         # Cache Dependencies
       - type: cache-save
         name: Store bundle cache
-        key: fainda_api-{{ checksum "Gemfile.lock" }}
+        key: fainda-rails-app-{{ checksum "Gemfile.lock" }}
         paths: 
           - vendor/bundle
       # Wait for DB
@@ -44,5 +44,7 @@ jobs:
       #run tests
       - run:   |
             bundle exec rspec 
-      - run: bundle exec rubocop
+      - run: bundle exec cucumber
+      - run: bundle exec rubocop --lint
+
 
