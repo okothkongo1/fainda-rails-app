@@ -42,9 +42,9 @@ jobs:
       # Setup the database
       - run: bundle exec rake db:setup      
       #run tests
-      - run:   |
-            bundle exec rspec 
-      - run: bundle exec cucumber
-      - run: bundle exec rubocop --lint
+
+      - run: bundle exec rake test_task:linting_and_test
+
+
 
 
