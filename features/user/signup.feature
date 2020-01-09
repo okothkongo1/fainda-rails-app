@@ -1,6 +1,6 @@
-Feature: Create User
-	As a system user 
-	I want to create an account
+Feature: User Signup
+	I want to signup
+	So that I can have an account
 
 	Scenario: User Succefully Create Account
 		Given I am on the create account page
@@ -30,7 +30,7 @@ Feature: Create User
 		And I fill in "Password" with "Strongerthan123Usual"
 		And I fill in "Password confirmation" with "Strongerthan123Usual"	
 		And I click Create user 
-		Then I should see "enter stronger password"		
+		Then I should see "Complexity requirement not met. Length should be at least 8 characters and include: 1 uppercase, 1 lowercase, 1 digit and 1 special character"
 
 	Scenario: User with None Match Password
 		Given I am on the create account page
